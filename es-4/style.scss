@@ -1,3 +1,4 @@
+@import 'functions';
 @import 'mixins';
 @import 'variables';
 
@@ -6,14 +7,14 @@ div {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: rem(10);
 
-  border: 2px solid map-get($map: $colors, $key: red);
-  padding: 10px;
+  border: rem(2) solid map-get($map: $colors, $key: red);
+  padding: rem(10);
 
   h1 {
     color: map-get($map: $colors, $key: green);
-    border-bottom: 2px solid map-get($map: $colors, $key: grey);
+    border-bottom: rem(2) solid map-get($map: $colors, $key: grey);
   }
 
   section:first-of-type {
@@ -24,8 +25,8 @@ div {
     article {
       flex: 1 100%;
       
-      border: 2px solid;
-      padding: 20px;
+      border: rem(2) solid;
+      padding: rem(20);
       text-align: center;
     }
 
@@ -43,9 +44,9 @@ div {
     text-align: center;
 
     article {
-      padding: 20px;
-      border: 2px solid;
-      @include article (map-get($map: $colors, $key: green), map-get($map: $colors, $key: grey), 24px)
+      padding: rem(20);
+      border: rem(2) solid;
+      @include article (map-get($map: $colors, $key: green), map-get($map: $colors, $key: grey), rem(24))
     }
   }
 }
