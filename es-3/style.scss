@@ -1,0 +1,31 @@
+@mixin bounce($partenza, $distanza) {
+  @keyframes bounce {
+    0% {transform: translateY($partenza);}
+    40% {transform: translateY($distanza);}
+    60% {transform: translateY($distanza / 2);}
+    // 100% {transform: translateY($partenza);}
+  }
+} 
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bounce {
+  background-color: aqua;
+  height: 100px;
+  aspect-ratio: 2 / 1;
+
+  animation-duration: 1s;
+  animation-name: bounce;
+  animation-delay: 2s;
+  animation-timing-function: ease-out;
+}
+
+@include bounce (0px, -30px)
