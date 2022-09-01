@@ -1,0 +1,30 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  border: 2px solid red;
+  padding: 10px;
+}
+div h1 {
+  color: green;
+  border-bottom: 2px solid grey;
+}
+div section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+div section article {
+  border: 2px solid green;
+  padding: 20px;
+  text-align: center;
+  flex: 1 100%;
+}
+div section article:nth-child(1), div section article:nth-child(3) {
+  color: blue;
+}
+div section article:nth-child(2), div section article:nth-child(4) {
+  color: red;
+}/*# sourceMappingURL=style.css.map */

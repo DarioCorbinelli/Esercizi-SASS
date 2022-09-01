@@ -1,0 +1,42 @@
+$red: red;
+$blue: blue;
+$green: green;
+
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+
+  border: 2px solid $red;
+  padding: 10px;
+
+  h1 {
+    color: $green;
+    border-bottom: 2px solid grey;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    article {
+      border: 2px solid $green;
+      padding: 20px;
+      text-align: center;
+
+      flex: 1 100%;
+    }
+
+    article:nth-child(1), article:nth-child(3) {
+      color: $blue;
+    }
+    
+    article:nth-child(2), article:nth-child(4) {
+      color: $red;
+    }
+  }
+}
